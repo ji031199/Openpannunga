@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Kirthika 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<section style="background:black;">
+<h1>In a world full of people...</h1>
+<p>My heart chose only one.</p>
+<button onclick="scrollToSection('reveal')">See Who 💕</button>
+</section>
+
+<section id="reveal" style="background:linear-gradient(to right,#ff758c,#ff7eb3);">
+<h1>Kirthika 💖</h1>
+<p>You are my peace. My happiness. My forever.</p>
+<button onclick="scrollToSection('memories')">Our Memories 📸</button>
+</section>
+
+<section id="memories" style="background:#111;">
+<h1>7 Beautiful Memories</h1>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+<button onclick="scrollToSection('proposal')">Final Surprise 💌</button>
+</section>
+
+<section id="proposal" style="background:linear-gradient(to right,#ff4b7d,#ff758c);">
+<h1>Thangameyyyyy ❤️</h1>
+<p>No matter where life takes us... I promise to stand beside you.</p>
+<p>You are not just special... You are my everything.</p>
+<h1>Will You Be Mine Forever?</h1>
+</section>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+// floating hearts
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.style.left=Math.random()*100+"%";
+  heart.style.fontSize=(Math.random()*20+15)+"px";
+  heart.innerHTML="💖";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},500);
+</script>
+
+</body>
+</html>
