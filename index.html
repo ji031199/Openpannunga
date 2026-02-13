@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Thangameyyyyy 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+<h1>Hey Kirthika 💕</h1>
+<p>In a world full of people... my heart chose only one.</p>
+<button onclick="startExperience()">Start Our Love Story 🎶</button>
+</section>
+
+<section style="background:linear-gradient(to right,#ff4b7d,#ff758c);">
+<h1>My Thangameyyyyy ❤️</h1>
+<p>You are my peace. My happiness. My forever.</p>
+</section>
+
+<section style="background:#111;">
+<h1>7 Beautiful Memories</h1>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+</section>
+
+<section style="background:linear-gradient(to right,#ff758c,#ff9a9e);">
+<h1>Secret Love Letter 💌</h1>
+<p>No matter where life takes us... I promise to stand beside you.</p>
+<p>I choose you. Every single day. Without doubt.</p>
+</section>
+
+<section style="background:black;">
+<h1>Final Question 💍</h1>
+<p>Thangameyyyyy... Will You Be Mine Forever?</p>
+<button onclick="celebrate()">Click If Yes 💖</button>
+</section>
+
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function startExperience(){
+  document.getElementById("bgMusic").play();
+  window.scrollBy({top:window.innerHeight, behavior:'smooth'});
+}
+
+// Floating hearts
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.style.left=Math.random()*100+"%";
+  heart.style.fontSize=(Math.random()*25+15)+"px";
+  heart.innerHTML="💖";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},500);
+
+// Rose petals
+setInterval(()=>{
+  const petal=document.createElement("div");
+  petal.className="petal";
+  petal.style.left=Math.random()*100+"%";
+  petal.style.fontSize=(Math.random()*20+15)+"px";
+  petal.innerHTML="🌹";
+  document.body.appendChild(petal);
+  setTimeout(()=>petal.remove(),8000);
+},800);
+
+// Fireworks on proposal
+function celebrate(){
+  for(let i=0;i<20;i++){
+    const fw=document.createElement("div");
+    fw.className="firework";
+    fw.style.left=Math.random()*100+"%";
+    fw.style.top=Math.random()*100+"%";
+    fw.innerHTML="✨";
+    document.body.appendChild(fw);
+    setTimeout(()=>fw.remove(),1000);
+  }
+}
+</script>
+
+</body>
+</html>
